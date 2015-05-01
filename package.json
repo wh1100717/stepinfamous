@@ -1,0 +1,24 @@
+{
+  "name": "stepinfamous",
+  "version": "0.1.0",
+  "author": {
+    "name": "Forest"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-banner": "~0.2.3",
+    "grunt-cli": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-nunjucks": "^0.1.4",
+    "load-grunt-tasks": "*"
+  }
+}

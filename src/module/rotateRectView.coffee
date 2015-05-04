@@ -11,7 +11,6 @@ define (require, exports, module) ->
             super
             _createRotatView.call(@)
 
-
     RotateRectView.DEFAULT_OPTIONS = {
         size: [200, 200]
         align: [0.5, 0.5]
@@ -21,20 +20,19 @@ define (require, exports, module) ->
     }
 
     _createRotatView = ->
-        _$ = @
         rectSurface = new Surface {
-            size: _$.options.size
+            size: @options.size
             properties: {
-                backgroundColor: _$.options.color
+                backgroundColor: @options.color
             }
             classes: ['backfaceVisibility']
         }
         initialTime = Date.now()
         centerSpinModifier = new Modifier {
-            align: _$.options.align
-            origin: _$.options.origin
-            transform: ->
-                Transform.rotateY(_$.options.frequency * 0.001 * (Date.now() - initialTime))
+            align: @options.align
+            origin: @options.origin
+            transform: =>
+                Transform.rotateY(@options.frequency * 0.001 * (Date.now() - initialTime))
         }
         @add(centerSpinModifier).add(rectSurface)
 
